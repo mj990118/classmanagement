@@ -1,31 +1,31 @@
 /* ==========================================================================
-   자란다 3학년 1반 학급 경제 교실 Main Logic (app.js)
+   자란다 3학년 2반 학급 경제 교실 Main Logic (app.js)
    ========================================================================== */
 
 // --- Default Initial State ---
 const DEFAULT_STUDENTS = [
-    { id: 1, number: 1, name: "김민준", balance: 1000, xp: 45, jobId: 1, jobDoneToday: false, missionDoneToday: false, streak: 5 },
-    { id: 2, number: 2, name: "이서연", balance: 1200, xp: 80, jobId: 2, jobDoneToday: true, missionDoneToday: true, streak: 7 },
-    { id: 3, number: 3, name: "박도윤", balance: 800, xp: 20, jobId: 3, jobDoneToday: false, missionDoneToday: false, streak: 2 },
-    { id: 4, number: 4, name: "최하은", balance: 1500, xp: 120, jobId: 4, jobDoneToday: true, missionDoneToday: true, streak: 10 },
-    { id: 5, number: 5, name: "정지후", balance: 950, xp: 35, jobId: 5, jobDoneToday: false, missionDoneToday: false, streak: 3 },
-    { id: 6, number: 6, name: "강지유", balance: 1100, xp: 60, jobId: 6, jobDoneToday: true, missionDoneToday: false, streak: 4 },
-    { id: 7, number: 7, name: "조현우", balance: 700, xp: 10, jobId: 7, jobDoneToday: false, missionDoneToday: false, streak: 1 },
-    { id: 8, number: 8, name: "윤수아", balance: 1350, xp: 95, jobId: 1, jobDoneToday: true, missionDoneToday: true, streak: 8 },
-    { id: 9, number: 9, name: "장준서", balance: 600, xp: 0, jobId: 2, jobDoneToday: false, missionDoneToday: false, streak: 0 },
-    { id: 10, number: 10, name: "임채원", balance: 1400, xp: 110, jobId: 3, jobDoneToday: true, missionDoneToday: false, streak: 6 },
-    { id: 11, number: 11, name: "한지호", balance: 850, xp: 25, jobId: 4, jobDoneToday: false, missionDoneToday: false, streak: 2 },
-    { id: 12, number: 12, name: "오유진", balance: 1050, xp: 50, jobId: 5, jobDoneToday: true, missionDoneToday: true, streak: 4 },
-    { id: 13, number: 13, name: "서건우", balance: 900, xp: 30, jobId: 6, jobDoneToday: false, missionDoneToday: false, streak: 3 },
-    { id: 14, number: 14, name: "신아린", balance: 1600, xp: 150, jobId: 7, jobDoneToday: true, missionDoneToday: true, streak: 12 },
-    { id: 15, number: 15, name: "권도현", balance: 750, xp: 15, jobId: 1, jobDoneToday: false, missionDoneToday: false, streak: 1 },
-    { id: 16, number: 16, name: "황지민", balance: 1150, xp: 70, jobId: 2, jobDoneToday: true, missionDoneToday: false, streak: 5 },
-    { id: 17, number: 17, name: "안우주", balance: 980, xp: 40, jobId: 3, jobDoneToday: false, missionDoneToday: false, streak: 3 },
-    { id: 18, number: 18, name: "송다은", balance: 1250, xp: 85, jobId: 4, jobDoneToday: true, missionDoneToday: true, streak: 7 },
-    { id: 19, number: 19, name: "류태양", balance: 650, xp: 5, jobId: 5, jobDoneToday: false, missionDoneToday: false, streak: 0 },
-    { id: 20, number: 20, name: "홍예은", balance: 1300, xp: 100, jobId: 6, jobDoneToday: true, missionDoneToday: true, streak: 9 },
-    { id: 21, number: 21, name: "백주원", balance: 880, xp: 20, jobId: 7, jobDoneToday: false, missionDoneToday: false, streak: 2 },
-    { id: 22, number: 22, name: "고은서", balance: 1000, xp: 55, jobId: 1, jobDoneToday: true, missionDoneToday: false, streak: 4 }
+    { id: 1, number: 1, name: "김도하", balance: 1000, xp: 45, jobId: 1, jobDoneToday: false, missionDoneToday: false, streak: 5 },
+    { id: 2, number: 2, name: "김우찬", balance: 1200, xp: 80, jobId: 2, jobDoneToday: true, missionDoneToday: true, streak: 7 },
+    { id: 3, number: 3, name: "김이안", balance: 800, xp: 20, jobId: 3, jobDoneToday: false, missionDoneToday: false, streak: 2 },
+    { id: 4, number: 4, name: "김정우", balance: 1500, xp: 120, jobId: 4, jobDoneToday: true, missionDoneToday: true, streak: 10 },
+    { id: 5, number: 5, name: "김준희", balance: 950, xp: 35, jobId: 5, jobDoneToday: false, missionDoneToday: false, streak: 3 },
+    { id: 6, number: 6, name: "박시원", balance: 1100, xp: 60, jobId: 6, jobDoneToday: true, missionDoneToday: false, streak: 4 },
+    { id: 7, number: 7, name: "신시현", balance: 700, xp: 10, jobId: 7, jobDoneToday: false, missionDoneToday: false, streak: 1 },
+    { id: 8, number: 8, name: "심윤우", balance: 1350, xp: 95, jobId: 1, jobDoneToday: true, missionDoneToday: true, streak: 8 },
+    { id: 9, number: 9, name: "최라온", balance: 600, xp: 0, jobId: 2, jobDoneToday: false, missionDoneToday: false, streak: 0 },
+    { id: 10, number: 10, name: "홍하늬", balance: 1400, xp: 110, jobId: 3, jobDoneToday: true, missionDoneToday: false, streak: 6 },
+    { id: 11, number: 11, name: "강다윤", balance: 850, xp: 25, jobId: 4, jobDoneToday: false, missionDoneToday: false, streak: 2 },
+    { id: 12, number: 12, name: "김은서", balance: 1050, xp: 50, jobId: 5, jobDoneToday: true, missionDoneToday: true, streak: 4 },
+    { id: 13, number: 13, name: "노예린", balance: 900, xp: 30, jobId: 6, jobDoneToday: false, missionDoneToday: false, streak: 3 },
+    { id: 14, number: 14, name: "박소민", balance: 1600, xp: 150, jobId: 7, jobDoneToday: true, missionDoneToday: true, streak: 12 },
+    { id: 15, number: 15, name: "심윤서", balance: 750, xp: 15, jobId: 1, jobDoneToday: false, missionDoneToday: false, streak: 1 },
+    { id: 16, number: 16, name: "안나엘", balance: 1150, xp: 70, jobId: 2, jobDoneToday: true, missionDoneToday: false, streak: 5 },
+    { id: 17, number: 17, name: "유채은", balance: 980, xp: 40, jobId: 3, jobDoneToday: false, missionDoneToday: false, streak: 3 },
+    { id: 18, number: 18, name: "이지후", balance: 1250, xp: 85, jobId: 4, jobDoneToday: true, missionDoneToday: true, streak: 7 },
+    { id: 19, number: 19, name: "최지우", balance: 650, xp: 5, jobId: 5, jobDoneToday: false, missionDoneToday: false, streak: 0 },
+    { id: 20, number: 20, name: "최지윤", balance: 1300, xp: 100, jobId: 6, jobDoneToday: true, missionDoneToday: true, streak: 9 },
+    { id: 21, number: 21, name: "홍지은", balance: 880, xp: 20, jobId: 7, jobDoneToday: false, missionDoneToday: false, streak: 2 },
+    { id: 22, number: 22, name: "황단아", balance: 1000, xp: 55, jobId: 1, jobDoneToday: true, missionDoneToday: false, streak: 4 }
 ];
 
 const DEFAULT_JOBS = [
